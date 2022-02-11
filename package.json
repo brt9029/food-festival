@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "name": "food-festival",
   "description": "- Purpose: Turn an app to a PWA in order to allow users to interact with the website even while there is no internet connection or cell service",
@@ -42,6 +45,7 @@
     "has": "^1.0.3",
     "has-flag": "^4.0.0",
     "human-signals": "^2.1.0",
+    "image-webpack-loader": "^8.1.0",
     "import-local": "^3.1.0",
     "interpret": "^2.2.0",
     "is-core-module": "^2.8.1",
@@ -103,8 +107,9 @@
     "wildcard": "^2.0.0"
   },
   "scripts": {
-    "webpack": "webpack-watch",
+    "webpack": "webpack --watch",
     "build": "webpack",
+    "start:dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
