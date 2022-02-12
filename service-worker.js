@@ -17,7 +17,7 @@ const FILES_TO_CACHE = [
 
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
-    e.respondWith(
+    e.respondWith(f
         caches.match(e.request).then(function (request) {
             if (request) {
                 console.log('responding with cache : ' + e.request.url)
